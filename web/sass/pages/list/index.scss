@@ -1,0 +1,22 @@
+
+
+@import './comps/index.scss';
+
+
+.page-list-messages{
+  width: 80%;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  border-radius: 10px;
+  background-color: $color-light;
+  overflow: hidden;
+  padding: 10px;
+}
+
+  .page-list-messages-message{
+    padding: 10px;
+    font-family: $font-text;
+    color:white;
+    font-size: 18px;
+  }

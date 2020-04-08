@@ -1,0 +1,37 @@
+
+
+.page-list-comp-menu{
+  background-color: $color-accent;
+  font-family: $font-heading;
+  color:white;
+}
+
+  .page-list-comp-menu-left{
+    width: 30%;
+    display: inline-block;
+  }
+
+    .page-list-comp-menu-left-logo{
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+  .page-list-comp-menu-right{
+    width: 70%;
+    display: inline-block;
+    text-align: right;
+  }
+
+    .page-list-comp-menu-right-link{
+      font-size: 16px;
+      margin: 10px;
+      padding-bottom: 10px;
+      display: inline-block;
+      cursor: pointer;
+      border-bottom: 5px solid $color-accent;
+    }
+
+    .page-list-comp-menu-right-link:hover{
+      border-bottom: 5px solid white;
+    }

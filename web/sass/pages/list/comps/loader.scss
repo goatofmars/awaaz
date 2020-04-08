@@ -1,0 +1,41 @@
+
+
+
+.page-list-comp-loader{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  // border: 5px solid red;
+  top:0px;
+  left:0px;
+}
+
+  .page-list-comp-loader-background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $color-light;
+    opacity: 0.3;
+    z-index: 5;
+    top:0px;
+    left:0px;
+  }
+
+  .page-list-comp-loader-card{
+    background-color: white;
+    position: absolute;
+    height: 20vh;
+    width: 50vw;
+    top:30vh;
+    left:25vw;
+    z-index: 66;
+    overflow:hidden;
+    border-radius: 5px;
+    text-align:center;
+    // border: 5px solid red;
+  }
+
+    .page-list-comp-loader-card-image{
+      width: auto;
+      height: 100%;
+    }
