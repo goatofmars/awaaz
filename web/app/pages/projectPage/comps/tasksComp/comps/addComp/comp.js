@@ -144,7 +144,7 @@ function build(goal,task,project){
         const hold = bind_task(project,first);
         const run = await submit(hold,new_message);
         if(run){
-          engine.global.function.reset_project();
+          engine.global.function.reset_project(hold);
         }
       }
     });

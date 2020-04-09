@@ -69,9 +69,9 @@ function build(project){
     class:'page-project-main'
   });
 
-  engine.add.function('reset_project',()=>{
+  engine.add.function('reset_project',(project)=>{
     engine.view.remove(main);
-    fetch(project.id,true);
+    fetch(project,true);
   });
 
     const card = engine.make.div({

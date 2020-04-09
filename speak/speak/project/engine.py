@@ -1,5 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.views.decorators.cache import never_cache
 from django.http import HttpRequest
 # import json
 
@@ -19,6 +20,7 @@ def error(e):
     })
     return build
 
+@never_cache
 @api_view(['GET','POST'])
 def hello(request):
     return success({"message": "Hello, world!"})
@@ -26,17 +28,20 @@ def hello(request):
 
 projects = []
 
+@never_cache
 @api_view(['GET','POST'])
 def list(request):
     print(">>> list projects successfull")
     return success(projects)
 
+@never_cache
 @api_view(['GET','POST'])
 def submit(request):
     projects.insert(1,request.data);
     print(">>> submit project successfull")
     return success(request.data)
 
+@never_cache
 @api_view(['GET','POST'])
 def get(request):
     hold = False;
@@ -49,6 +54,7 @@ def get(request):
         print(">>> get project successfull")
         return success(hold)
 
+@never_cache
 @api_view(['GET','POST'])
 def update(request):
     found = False

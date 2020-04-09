@@ -108,7 +108,7 @@ function make_task_card(p,task,project,full){
         const hold = bind_task(project,task);
         const run = await submit(hold);
         if(run){
-          engine.global.function.reset_project();
+          engine.global.function.reset_project(hold);
         }
       }
 
@@ -171,7 +171,7 @@ function make_task_card(p,task,project,full){
           const hold = bind_task(project,task,true);
           const run = await submit(hold);
           if(run){
-            engine.global.function.reset_project();
+            engine.global.function.reset_project(hold);
           }
         }
       });
@@ -350,7 +350,7 @@ function open_task_form(task,project){
         const hold = bind_task(project,data);
         const run = await submit(hold,new_message);
         if(run){
-          engine.global.function.reset_project();
+          engine.global.function.reset_project(hold);
         }
       }
     });

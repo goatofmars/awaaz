@@ -41,7 +41,8 @@ async function build(){
   const messages = [
     '1. hey this is the sample app you asked for its in js frameowrk i developed.',
     '2. the api does not contains any db',
-    '3. projects are wipped on regular intervals'
+    '3. projects are wipped on regular intervals',
+    '4. there seems to be a problem with gunicorn which i cannot debug for now please reload the page until you get the updated data from the api'
   ];
 
   const messages_cont = engine.make.div({

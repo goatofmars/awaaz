@@ -85,7 +85,7 @@ function build(goal,task,project){
       const hold = bind_task(project,first);
       const run = await submit(hold);
       if(run){
-        engine.global.function.reset_project();
+        engine.global.function.reset_project(hold);
       }
     }
 
@@ -139,7 +139,7 @@ function build(goal,task,project){
         const hold = bind_task(project,first);
         const run = await submit(hold);
         if(run){
-          engine.global.function.reset_project();
+          engine.global.function.reset_project(hold);
         }
       }
     });
