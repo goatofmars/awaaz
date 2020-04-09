@@ -1,3 +1,61 @@
 
 
 @import './comps/index.scss';
+
+
+.page-project-main{
+  padding-top: 5vh;
+}
+
+  .page-project-main-card{
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15vh;
+  }
+
+    .page-project-main-card-title{
+      background-color: $color-accent;
+      font-family: $font-heading;
+      padding: 20px;
+      color:white;
+      text-transform: capitalize;
+      font-size: 24px;
+    }
+
+    .page-project-main-card-banner{
+      font-size: 24px;
+      font-family: $font-heading;
+      padding: 10px;
+      color:$color-accent;
+    }
+
+    .page-project-main-card-date{
+      font-size: 16px;
+      padding: 10px;
+      font-family: $font-text;
+    }
+
+    .page-project-main-card-discription{
+      font-size: 18px;
+      padding: 10px;
+      font-family: $font-text;
+    }
+
+    .page-project-main-card-options{
+      padding: 10px;
+      text-align: right;
+    }
+
+      .page-project-main-card-options-button{
+        background-color: $color-accent;
+        color:white;
+        font-family: $font-text;
+        padding: 10px;
+        text-transform: capitalize;
+        font-size: 18px;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+      }

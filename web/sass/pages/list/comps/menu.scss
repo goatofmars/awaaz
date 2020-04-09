@@ -4,6 +4,11 @@
   background-color: $color-accent;
   font-family: $font-heading;
   color:white;
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  top:0px;
+  left:0px;
 }
 
   .page-list-comp-menu-left{
@@ -21,6 +26,7 @@
     width: 70%;
     display: inline-block;
     text-align: right;
+    padding-right: 2vw;
   }
 
     .page-list-comp-menu-right-link{

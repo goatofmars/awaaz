@@ -12,33 +12,57 @@ def success(body):
     })
     return build
 
+def error(e):
+    build = Response({
+        'result':'error',
+        'error':e
+    })
+    return build
+
 @api_view(['GET','POST'])
 def hello(request):
     return success({"message": "Hello, world!"})
 
 
-projects = {
-    'sdf809888':{
-        'title':'',
-        'discription':'',
-        'tasks':{
-            'sd0f8098s908sdf':{
-                'title':'',
-                'discription':'',
-                'subtasks':{
-                    '23424525346g54tg':{
-                        'title':'',
-                        'discription':''
-                    }
-                }
-            }
-        }
-    }
-}
+projects = []
 
 @api_view(['GET','POST'])
 def list(request):
+    print(">>> list projects successfull")
     return success(projects)
+
+@api_view(['GET','POST'])
+def submit(request):
+    projects.insert(1,request.data);
+    print(">>> submit project successfull")
+    return success(request.data)
+
+@api_view(['GET','POST'])
+def get(request):
+    hold = False;
+    for project in projects:
+        if project["id"] == request.data["project"]:
+            hold = project
+    if hold == False:
+        return error("not_found")
+    else:
+        print(">>> get project successfull")
+        return success(hold)
+
+@api_view(['GET','POST'])
+def update(request):
+    found = False
+    count = 0
+    for project in projects:
+        if project["id"] == request.data["id"]:
+            found = True
+            projects[count] = request.data
+            print(">>> update project successfull")
+            break
+        count += 1
+    if found == False:
+        projects.insert(1,request.data);
+    return success(request.data)
 
 
 # @api_view(['GET','POST'])

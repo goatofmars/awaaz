@@ -27,6 +27,11 @@ function build(){
     class:'page-list-comp-menu'
   });
 
+  engine.make.div({
+    parent:compId,
+    style:'margin-top:15vh;'
+  });
+
   const left = engine.make.div({
     parent:main,
     class:'page-list-comp-menu-left'
@@ -35,7 +40,13 @@ function build(){
     engine.make.div({
       parent:left,
       class:'page-list-comp-menu-left-logo',
-      text:'awaaz'
+      text:'awaaz',
+      function:()=>{
+        let mod = engine.get.pageModule("listPage");
+        if(mod){
+          engine.router.navigate.new.page(mod);
+        }
+      }
     });
 
   const right = engine.make.div({
@@ -58,7 +69,7 @@ function make_link(p,link){
     class:'page-list-comp-menu-right-link',
     text:link.tag,
     function:()=>{
-      window.open(link.url);
+      window.open(link.link);
     }
   });
 }

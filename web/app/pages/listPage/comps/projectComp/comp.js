@@ -7,7 +7,7 @@ const type = 'comp';                      //type of app
 var parentId;
 var compId;
 
-const init = (pid) => {         //pid referes to the parentPageId, pass this var when you init thiscomp.
+const init = (pid,project) => {         //pid referes to the parentPageId, pass this var when you init thiscomp.
 
   if(pid == null || pid == undefined){
     return engine.common.error('no_parent_page_ref_found'); //common error logger
@@ -16,43 +16,39 @@ const init = (pid) => {         //pid referes to the parentPageId, pass this var
   parentId = pid;               //set parent page ref
   compId = parentId + compRef;  //set comp id
   engine.make.init.comp(compId,parentId,'comp');
-  build();                      //start build you can also start fetch here.
+  build(project);                      //start build you can also start fetch here.
 
 }
+function build(project){
 
-//these trackers will be triggered when this module is routed
-const trackers = {
-  title:'sample comp title',
-  meta:[
-    {
-      name:'description',
-      content:'this is a sample comp description'
-    },
-    {
-      name:'keywords',
-      content:'comp,vegana'
-    }
-  ],
-  function_data:{},
-  //function will be triggered with the function data as input when the module is routed to.
-  function:(function_data)=>{}
-};
-
-//build the dom for comp here
-function build(){
-
-  engine.common.tell('building',log);
-
-  //sample greetings
-  let greetings = engine.make.div({
-    id:"greetings",
+  const main = engine.make.div({
     parent:compId,
-    class:'greetings',
-    text:'greetings this is the project comp'
+    class:'page-list-comp-project'
   });
 
-  return true; //always return after build it can be
+  const card = engine.make.div({
+    parent:main,
+    class:'card page-list-comp-project-card',
+    function:()=>{
+      let mod = engine.get.pageModule("projectPage");
+      if(mod){
+        engine.router.navigate.new.page(mod,project);
+      }
+    }
+  });
+
+    engine.make.div({
+      parent:card,
+      class:'page-list-comp-project-card-tag',
+      text:'open'
+    });
+
+    engine.make.div({
+      parent:card,
+      class:'page-list-comp-project-card-title',
+      text:project.title
+    });
 
 }
 
-module.exports = {init:init,ref:compRef,type:type,trackers:trackers}
+module.exports = {init:init,ref:compRef,type:type,trackers:null}

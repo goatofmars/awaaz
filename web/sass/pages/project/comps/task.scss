@@ -1,0 +1,229 @@
+
+
+.page-project-comp-tasks{
+
+}
+
+  .page-project-comp-tasks-list{
+    margin: auto;
+    width: 80%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .page-project-comp-tasks-add{
+    width: 40%;
+    margin: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    max-width: 200px;
+    border-radius: 5px;
+  }
+
+    .page-project-comp-tasks-add-tag{
+      font-size: 24px;
+      padding: 10px;
+      color:$color-accent;
+      font-family: $font-heading;
+    }
+
+    .page-project-comp-tasks-add-text{
+      font-size: 16px;
+      padding: 10px;
+      color:$color-accent;
+      font-family: $font-heading;
+    }
+
+//task list items
+
+.page-project-comp-tasks-list-item{
+  // border: 5px solid green;
+  pointer-events: stroke;
+  border-top: 0.5px solid grey;
+  // border: 5px solid red;
+  overflow: auto;
+}
+
+.page-project-comp-tasks-list-item-goal{
+  // border: 5px solid green;
+  border-bottom: 0.5px solid grey;
+  pointer-events: stroke;
+  // border: 5px solid red;
+}
+
+  .page-project-comp-tasks-list-item-top{
+    height: 10vh;
+    overflow: hidden;
+    border-bottom: 0.5px solid grey;
+    // border: 5px solid purple;
+  }
+
+    .page-project-comp-tasks-list-item-top-left{
+      text-align: center;
+      display: inline-block;
+      width: 20%;
+      vertical-align: top;
+      // border: 5px solid red;
+    }
+
+      .page-project-comp-tasks-list-item-top-left-image{
+        height: 6vh;
+        width: auto;
+        margin-top: 2vh;
+        cursor: pointer;
+      }
+
+    .page-project-comp-tasks-list-item-top-center{
+      display: inline-block;
+      width: 60%;
+      vertical-align: middle;
+      font-family: $font-text;
+      font-size: 18px;
+      // border: 5px solid red;
+      padding-top: 3vh;
+    }
+
+      .page-project-comp-tasks-list-item-top-center-title{
+        display: inline-block;
+        width: 70%;
+        vertical-align: top;
+      }
+
+      .page-project-comp-tasks-list-item-top-center-days{
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+      }
+
+    .page-project-comp-tasks-list-item-top-right{
+      text-align: right;
+      display: inline-block;
+      width: 20%;
+      vertical-align: top;
+      // border: 5px solid red;
+    }
+
+      .page-project-comp-tasks-list-item-top-right-image{
+        margin-right: 1vw;
+        height: 4vh;
+        width: auto;
+        margin-top: 3vh;
+        cursor: pointer;
+      }
+
+  .page-project-comp-tasks-list-item-goals{
+    width: 90%;
+    float: right;
+    // border: 5px solid red;
+    border-left: 0.5px solid grey;
+  }
+
+
+//form
+
+.page-project-comp-tasks-form-wrapper{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top:0px;
+  left:0px;
+  // border: 5px solid purple;
+}
+
+  .page-project-comp-tasks-form-background{
+    position: fixed;
+    background-color: $color-accent;
+    opacity: 0.1;
+    height: 100vh;
+    width: 100vw;
+    top:0px;
+    left:0px;
+    // border: 5px solid green;
+    z-index: 3;
+  }
+
+  .page-project-comp-tasks-form{
+    position: relative;
+    max-height: 80vh;
+    width: 80vw;
+    top:14vh;
+    left:10vw;
+    // border:5px solid red;
+    background-color: white;
+    z-index: 4;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+    .page-project-comp-tasks-form-title{
+      background-color: $color-accent;
+      color:white;
+      font-family: $font-text;
+      display: flex;
+      height: 10vh;
+    }
+
+      .page-project-comp-tasks-form-title-left{
+        flex: 5;
+        padding: 20px;
+        font-size: 24px;
+      }
+
+      .page-project-comp-tasks-form-title-right{
+        flex: 1;
+        padding: 10px;
+        text-align: right;
+      }
+
+        .page-project-comp-tasks-form-title-right-button{
+          background-color: darken($color-accent, 10%);
+          border: 0px;
+          border-radius: 5px;
+          padding: 15px;
+          color:white;
+        }
+
+    .page-project-comp-tasks-form-body{
+      padding: 10px;
+      text-align: center;
+    }
+
+        .page-project-comp-tasks-form-body-field{
+          width: 80%;
+          border: 5px solid $color-accent;
+          padding: 10px;
+          border-radius: 5px;
+          font-family: $font-text;
+          font-size: 24px;
+          margin-top: 2vh;
+          margin-bottom: 2vh;
+        }
+
+        .page-project-comp-tasks-form-body-message{
+
+        }
+
+          .page-project-comp-tasks-form-body-message-text{
+            font-size: 24px;
+            font-family: $font-text;
+            padding: 10px;
+            width: 80%;
+            margin: auto;
+          }
+
+        .page-project-comp-tasks-form-body-button{
+          width: 80%;
+          border: 0px;
+          padding: 10px;
+          border-radius: 5px;
+          font-family: $font-text;
+          font-size: 24px;
+          margin-top: 2vh;
+          margin-bottom: 2vh;
+          background-color: $color-accent;
+          color:white;
+        }

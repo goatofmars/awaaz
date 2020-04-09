@@ -1,0 +1,62 @@
+
+.page-list-comp-form{
+  padding-top: 5vh;
+}
+
+  .page-list-comp-form-card{
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+    .page-list-comp-form-card-title{
+      background-color: $color-accent;
+      color:white;
+      font-family: $font-heading;
+      padding: 20px;
+      text-transform: capitalize;
+      font-size: 24px;
+    }
+
+    .page-list-comp-form-card-form{
+      text-align: center;
+      text-transform: $font-text;
+      padding-top: 4vh;
+    }
+
+      .page-list-comp-form-card-form-field{
+        width: 80%;
+        border: 5px solid $color-accent;
+        border-radius: 5px;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        padding: 10px;
+        font-size: 24px;
+      }
+
+      .page-list-comp-form-card-form-message{
+
+      }
+
+        .page-list-comp-form-card-form-message-text{
+          width: 80%;
+          margin: auto;
+          padding: 10px;
+          font-family: $font-text;
+          font-size: 24px;
+        }
+
+      .page-list-comp-form-card-form-button{
+        background-color: $color-accent;
+        color:white;
+        font-family: $font-heading;
+        border: 0px;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80%;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+        font-size: 24px;
+        cursor: pointer;
+      }

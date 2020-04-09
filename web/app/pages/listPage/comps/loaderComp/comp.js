@@ -26,7 +26,9 @@ function build(){
     class:'page-list-comp-loader'
   });
 
-  engine.view.hide(main);
+  if(true){
+    engine.view.hide(main);
+  }
 
   const card = engine.make.div({
     parent:main,
@@ -38,6 +40,12 @@ function build(){
       class:'page-list-comp-loader-card-image',
       type:'local',
       location:'assets/images/loader.gif'
+    });
+
+    engine.make.div({
+      parent:card,
+      class:'page-list-comp-loader-card-message',
+      text:'please wait heroku takes time to boot the app.'
     });
 
   if(true){

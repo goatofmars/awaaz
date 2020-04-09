@@ -32,4 +32,7 @@ urlpatterns = [
     path('hello/', engine.hello),
     path('test/', mono),
     path('list/', engine.list),
+    path('submit/project/', engine.submit),
+    path('get/project/', engine.get),
+    path('update/project/', engine.update),
 ]

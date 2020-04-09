@@ -1,0 +1,32 @@
+
+
+.page-list-comp-error{
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+  .page-list-comp-error-card{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+    .page-list-comp-error-card-left{
+      flex: 1;
+      text-align: center;
+    }
+
+      .page-list-comp-error-card-left-image{
+        width: 80%;
+        height: auto;
+      }
+
+    .page-list-comp-error-card-right{
+      flex: 5;
+      font-size: 24px;
+      font-family: $font-text;
+      padding: 10px;
+    }

@@ -3,7 +3,13 @@ python3 -m venv env
 pip install django
 pip install djangorestframework
 pip install django-cors-headers
+
+pip install django-heroku
+pip install gunicorn, whitenoise
+
 python manage.py migrate
+
+
 
 //run
 python manage.py runserver

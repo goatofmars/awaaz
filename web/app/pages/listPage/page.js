@@ -14,15 +14,15 @@ const init = () => {
 
 //these trackers will be triggered when this module is routed
 const trackers = {
-  title:'sample page title',
+  title:'Awaaz Interview',
   meta:[
     {
       name:'description',
-      content:'this is a sample page description'
+      content:'just a simple sample app for awaaz'
     },
     {
       name:'keywords',
-      content:'page,vegana'
+      content:'awaaz,sample,interview'
     }
   ],
   function_data:{},
@@ -30,17 +30,13 @@ const trackers = {
   function:(function_data)=>{}
 };
 
-const menuComp = require('./comps/menuComp/comp');
-const projectComp = require('./comps/menuComp/comp');
-const loaderComp = require('./comps/loaderComp/comp');
+const projectComp = require('./comps/projectComp/comp');
+const newProjectComp = require('./comps/newProjectComp/comp');
 
 //build page
 async function build(){
 
-  engine.add.comp("menuComp",menuComp);
-
-  menuComp.init(pageId);
-  loaderComp.init(pageId);
+  engine.global.comp.menuComp.init(pageId);
 
   const messages = [
     '1. hey this is the sample app you asked for its in js frameowrk i developed.',
@@ -67,12 +63,32 @@ async function build(){
 
   const query = await engine.global.function.request({
     to:'/list/',
-    body:{}
+    body:{
+      get:true
+    }
   });
 
-  console.log(query);
+  if(!query || false){
+    engine.global.comp.errorComp.init(pageId,"something went wrong, while we were fetching projets from our servers please try again.");
+    return;
+  }
 
-  return true; //always return after the build completes
+  const projects_cont = engine.make.div({
+    parent:pageId,
+    class:'page-list-projects',
+  })
+
+  newProjectComp.init(projects_cont);
+
+  for(let project of query){
+    projectComp.init(projects_cont,project);
+  }
+
+  if(false){
+    engine.global.function.loader().show();
+  }
+
+  return true;
 
 }
 

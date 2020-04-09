@@ -1,0 +1,28 @@
+
+
+.page-list-comp-newProject{
+  width: 33.33%;
+  padding: 10px;
+  display: inline-block;
+}
+
+  .page-list-comp-newProject-card{
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+  }
+
+    .page-list-comp-newProject-card-sign{
+      font-family: $font-heading;
+      font-size: 48px;
+      color:$color-accent;
+    }
+
+    .page-list-comp-newProject-card-text{
+      font-family: $font-text;
+      font-size: 24px;
+      text-transform: capitalize;
+    }
